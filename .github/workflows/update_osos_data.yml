@@ -38,8 +38,7 @@ jobs:
 
       - name: Commit and push
         run: |
-          git config --global user.name 'grantbuster'
-          git config --global user.email 'grant.buster@nrel.gov'
+          git config --global user.name 'malihass'
           git add ./data/*.csv
           git add ./plots/*.png
           git commit -m "update osos data and plots"
