@@ -39,6 +39,7 @@ jobs:
       - name: Commit and push
         run: |
           git config --global user.name 'malihass'
+          git config --global user.name 'malik.hassanaly@gmail.com'
           git add ./data/*.csv
           git add ./plots/*.png
           git commit -m "update osos data and plots"
