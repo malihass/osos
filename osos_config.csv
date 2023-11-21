@@ -7,3 +7,4 @@ nrel,spargerdesign,,,,DATA_DIR/NAME.csv
 amrex-combustion,pelephysics,,,,DATA_DIR/NAME.csv
 nrel,sup3r,nrel-sup3r,,,DATA_DIR/NAME.csv
 rybchuk,latent-diffusion-3d-atmopheric-boundary-layer,,,,DATA_DIR/NAME.csv
+malihass,prettyPlot,,,,DATA_DIR/NAME.csv
