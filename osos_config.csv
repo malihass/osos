@@ -8,3 +8,4 @@ amrex-combustion,pelephysics,,,,DATA_DIR/NAME.csv
 nrel,sup3r,nrel-sup3r,,,DATA_DIR/NAME.csv
 rybchuk,latent-diffusion-3d-atmospheric-boundary-layer,,,,DATA_DIR/NAME.csv
 malihass,prettyPlot,prettyPlot,,,DATA_DIR/NAME.csv
+malihass,SecretSanta,,,,DATA_DIR/NAME.csv
