@@ -1,5 +1,4 @@
 ﻿git_owner,git_repo,pypi_name,conda_org,conda_name,fpath_out
-nrel,diversity_SR,,,,DATA_DIR/NAME.csv
 nrel,phase-space-sampling,uips,,,DATA_DIR/NAME.csv
 nrel,ganisp,,,,DATA_DIR/NAME.csv
 nrel,pinnstripes,,,,DATA_DIR/NAME.csv
@@ -8,4 +7,4 @@ amrex-combustion,pelephysics,,,,DATA_DIR/NAME.csv
 nrel,sup3r,nrel-sup3r,,,DATA_DIR/NAME.csv
 rybchuk,latent-diffusion-3d-atmospheric-boundary-layer,,,,DATA_DIR/NAME.csv
 malihass,prettyPlot,prettyPlot,,,DATA_DIR/NAME.csv
-malihass,SecretSanta,,,,DATA_DIR/NAME.csv
+malihass,secretsanta,,,,DATA_DIR/NAME.csv
