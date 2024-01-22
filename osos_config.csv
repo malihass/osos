@@ -11,3 +11,4 @@ nrel,sup3r,nrel-sup3r,,,DATA_DIR/NAME.csv
 rybchuk,latent-diffusion-3d-atmospheric-boundary-layer,,,,DATA_DIR/NAME.csv
 malihass,prettyPlot,prettyPlot,,,DATA_DIR/NAME.csv
 malihass,secretsanta,,,,DATA_DIR/NAME.csv
+nrel,batmods-lite,,,,DATA_DIR/NAME.csv
