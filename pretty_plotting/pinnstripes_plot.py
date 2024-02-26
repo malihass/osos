@@ -18,6 +18,10 @@ view_unique=Ai[1:,4]
 
 days = np.array(list(range(1,Ai[1:,:].shape[0]+1)))
 
+size=16
+#arrowprops = dict(arrowstyle='-|>')
+arrowprops = None
+
 fig,ax = plt.subplots()
 ax.xaxis.set_major_formatter(mdates.DateFormatter('%Y-%m'))
 y = np.cumsum(clone)
@@ -30,10 +34,10 @@ for il, label in enumerate(ax.xaxis.get_ticklabels()):
         old = label.get_text()
     else:
         label.set_visible(False)
-plt.annotate('Github upload', (mdates.date2num(date[date_github_index]), y[date_github_index]), xytext=(10, -15), textcoords='offset points', arrowprops=dict(arrowstyle='-|>'))
-plt.annotate('arXiv upload', (mdates.date2num(date[date_arxiv_index]), y[date_arxiv_index]), xytext=(10, -15), textcoords='offset points', arrowprops=dict(arrowstyle='-|>'))
-#plt.annotate('Arxiv upload', (mdates.date2num(date[date_arxiv_index]), view[date_arxiv_index]), xytext=(0, view[date_arxiv_index]+), textcoords='offset points', arrowprops=dict(arrowstyle='-|>'))
-pretty_labels("", "clones", 14, grid=False)
+plt.annotate('Github upload', (mdates.date2num(date[date_github_index]), y[date_github_index]), xytext=(10, -15), textcoords='offset points', arrowprops=arrowprops, fontsize=size, font="serif", weight="bold")
+plt.annotate('arXiv upload', (mdates.date2num(date[date_arxiv_index]), y[date_arxiv_index]), xytext=(10, -15), textcoords='offset points', arrowprops=arrowprops, fontsize=size, font="serif", weight="bold")
+#plt.annotate('Arxiv upload', (mdates.date2num(date[date_arxiv_index]), view[date_arxiv_index]), xytext=(0, view[date_arxiv_index]+), textcoords='offset points', arrowprops=arrowprops)
+pretty_labels("", "clones", size, grid=False)
 plt.tight_layout()
 
 fig,ax = plt.subplots()
@@ -48,10 +52,11 @@ for il, label in enumerate(ax.xaxis.get_ticklabels()):
         old = label.get_text()
     else:
         label.set_visible(False)
-plt.annotate('Github upload', (mdates.date2num(date[date_github_index]), y[date_github_index]), xytext=(10, -15), textcoords='offset points', arrowprops=dict(arrowstyle='-|>'))
-plt.annotate('arXiv upload', (mdates.date2num(date[date_arxiv_index]), y[date_arxiv_index]), xytext=(10, -15), textcoords='offset points', arrowprops=dict(arrowstyle='-|>'))
-
-pretty_labels("", "views", 14, title=f"# views = {np.cumsum(view)[-1]}, # clones = {np.cumsum(clone)[-1]}", grid=False)
+plt.annotate('Github upload', (mdates.date2num(date[date_github_index]), y[date_github_index]), xytext=(10, -15), textcoords='offset points', arrowprops=arrowprops,fontsize=size, font="serif", weight="bold")
+plt.annotate('arXiv upload', (mdates.date2num(date[date_arxiv_index]), y[date_arxiv_index]), xytext=(10, -15), textcoords='offset points', arrowprops=arrowprops,fontsize=size, font="serif", weight="bold")
+plt.plot(mdates.date2num(date[date_github_index]), y[date_github_index], 'o', markersize=15 , color='r')
+plt.plot(mdates.date2num(date[date_arxiv_index]), y[date_arxiv_index], 'o', markersize=15 , color='r')
+pretty_labels("", "views", size, title=f"# views = {np.cumsum(view)[-1]}, # clones = {np.cumsum(clone)[-1]}", grid=False)
 plt.tight_layout()
 
 fig,ax = plt.subplots()
@@ -66,9 +71,9 @@ for il, label in enumerate(ax.xaxis.get_ticklabels()):
         old = label.get_text()
     else:
         label.set_visible(False)
-plt.annotate('Github upload', (mdates.date2num(date[date_github_index]), y[date_github_index]), xytext=(10, -15), textcoords='offset points', arrowprops=dict(arrowstyle='-|>'))
-plt.annotate('arXiv upload', (mdates.date2num(date[date_arxiv_index]), y[date_arxiv_index]), xytext=(10, -15), textcoords='offset points', arrowprops=dict(arrowstyle='-|>'))
-pretty_labels("", "clones unique", 14, grid=False)
+plt.annotate('Github upload', (mdates.date2num(date[date_github_index]), y[date_github_index]), xytext=(10, -15), textcoords='offset points', arrowprops=arrowprops, fontsize=size, font="serif", weight="bold")
+plt.annotate('arXiv upload', (mdates.date2num(date[date_arxiv_index]), y[date_arxiv_index]), xytext=(10, -15), textcoords='offset points', arrowprops=arrowprops, fontsize=size, font="serif", weight="bold")
+pretty_labels("", "clones unique", size, grid=False)
 plt.tight_layout()
 
 
@@ -84,9 +89,11 @@ for il, label in enumerate(ax.xaxis.get_ticklabels()):
         old = label.get_text()
     else:
         label.set_visible(False)
-plt.annotate('Github upload', (mdates.date2num(date[date_github_index]), y[date_github_index]), xytext=(10, -15), textcoords='offset points', arrowprops=dict(arrowstyle='-|>'))
-plt.annotate('arXiv upload', (mdates.date2num(date[date_arxiv_index]), y[date_arxiv_index]), xytext=(10, -15), textcoords='offset points', arrowprops=dict(arrowstyle='-|>'))
-pretty_labels("", "views unique", 14, title=f"# views = {int(np.cumsum(view)[-1]):d}, # clones = {int(np.cumsum(clone)[-1]):d}", grid=False)
+plt.annotate('Github upload', (mdates.date2num(date[date_github_index]), y[date_github_index]), xytext=(10, -10), textcoords='offset points', arrowprops=arrowprops, fontsize=size, font="serif", weight="bold")
+plt.annotate('arXiv upload', (mdates.date2num(date[date_arxiv_index]), y[date_arxiv_index]), xytext=(10, -15), textcoords='offset points', arrowprops=arrowprops, fontsize=size, font="serif", weight="bold")
+plt.plot(mdates.date2num(date[date_github_index]), y[date_github_index], 'o', markersize=15 , color='r')
+plt.plot(mdates.date2num(date[date_arxiv_index]), y[date_arxiv_index], 'o', markersize=15 , color='r')
+pretty_labels("", "views unique", size, title=f"# views = {int(np.cumsum(view)[-1]):d}, # clones = {int(np.cumsum(clone)[-1]):d}", grid=False)
 plt.tight_layout()
 
 
@@ -104,9 +111,9 @@ for il, label in enumerate(ax.xaxis.get_ticklabels()):
         old = label.get_text()
     else:
         label.set_visible(False)
-plt.annotate('Github upload', (mdates.date2num(date[date_github_index]), y[date_github_index]), xytext=(10, -15), textcoords='offset points', arrowprops=dict(arrowstyle='-|>'))
-plt.annotate('arXiv upload', (mdates.date2num(date[date_arxiv_index]), y[date_arxiv_index]), xytext=(10, -15), textcoords='offset points', arrowprops=dict(arrowstyle='-|>'))
-pretty_labels("", "views unique per day", 14, grid=False)
+plt.annotate('Github upload', (mdates.date2num(date[date_github_index]), y[date_github_index]), xytext=(10, -15), textcoords='offset points', arrowprops=arrowprops, fontsize=size, font="serif", weight="bold")
+plt.annotate('arXiv upload', (mdates.date2num(date[date_arxiv_index]), y[date_arxiv_index]), xytext=(10, -15), textcoords='offset points', arrowprops=arrowprops, fontsize=size, font="serif", weight="bold")
+pretty_labels("", "views unique per day", size, grid=False)
 plt.tight_layout()
 
 
@@ -122,9 +129,9 @@ for il, label in enumerate(ax.xaxis.get_ticklabels()):
         old = label.get_text()
     else:
         label.set_visible(False)
-plt.annotate('Github upload', (mdates.date2num(date[date_github_index]), y[date_github_index]), xytext=(10, -15), textcoords='offset points', arrowprops=dict(arrowstyle='-|>'))
-plt.annotate('arXiv upload', (mdates.date2num(date[date_arxiv_index]), y[date_arxiv_index]), xytext=(10, -15), textcoords='offset points', arrowprops=dict(arrowstyle='-|>'))
-pretty_labels("", "clones unique per day", 14, grid=False)
+plt.annotate('Github upload', (mdates.date2num(date[date_github_index]), y[date_github_index]), xytext=(10, -15), textcoords='offset points', arrowprops=arrowprops, fontsize=size, font="serif", weight="bold")
+plt.annotate('arXiv upload', (mdates.date2num(date[date_arxiv_index]), y[date_arxiv_index]), xytext=(10, -15), textcoords='offset points', arrowprops=arrowprops, fontsize=size, font="serif", weight="bold")
+pretty_labels("", "clones unique per day", size, grid=False)
 plt.tight_layout()
 
 
