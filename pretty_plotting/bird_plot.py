@@ -11,12 +11,18 @@ date=pd.to_datetime(A[1:,0])
 
 
 date_github_index = np.argwhere(A[:,0] == '2024-02-28')[0][0]-1
+date_arxiv_index = np.argwhere(A[:,0] == '2024-04-30')[0][0]-1
 
-clone_unique=Ai[1:,2]
-clone=Ai[1:,1]
-view=Ai[1:,3]
-view_unique=Ai[1:,4]
-pypi=Ai[1:,15]
+ind_clones_unique = np.argwhere(A.data[0,:] == "clones_unique")[0][0]
+ind_clones = np.argwhere(A.data[0,:] == "clones")[0][0]
+ind_views_unique = np.argwhere(A.data[0,:] == "views_unique")[0][0]
+ind_pypi = np.argwhere(A.data[0,:] == "pypi_daily")[0][0]
+ind_views = np.argwhere(A.data[0,:] == "views")[0][0]
+clone_unique=Ai[1:,ind_clones_unique]
+clone=Ai[1:,ind_clones]
+view=Ai[1:,ind_views]
+view_unique=Ai[1:,ind_views_unique]
+pypi=Ai[1:,ind_pypi]
 
 days = np.array(list(range(1,Ai[1:,:].shape[0]+1)))
 
@@ -49,9 +55,26 @@ plt.annotate(
     font="serif",
     weight="bold",
 )
+plt.annotate(
+    "arXiv upload",
+    (mdates.date2num(date[date_arxiv_index]), y[date_arxiv_index]),
+    xytext=(10, -15),
+    textcoords="offset points",
+    arrowprops=arrowprops,
+    fontsize=size,
+    font="serif",
+    weight="bold",
+)
 plt.plot(
     mdates.date2num(date[date_github_index]),
     y[date_github_index],
+    "o",
+    markersize=15,
+    color="r",
+)
+plt.plot(
+    mdates.date2num(date[date_arxiv_index]),
+    y[date_arxiv_index],
     "o",
     markersize=15,
     color="r",
@@ -81,9 +104,26 @@ plt.annotate(
     font="serif",
     weight="bold",
 )
+plt.annotate(
+    "arXiv upload",
+    (mdates.date2num(date[date_arxiv_index]), y[date_arxiv_index]),
+    xytext=(10, -15),
+    textcoords="offset points",
+    arrowprops=arrowprops,
+    fontsize=size,
+    font="serif",
+    weight="bold",
+)
 plt.plot(
     mdates.date2num(date[date_github_index]),
     y[date_github_index],
+    "o",
+    markersize=15,
+    color="r",
+)
+plt.plot(
+    mdates.date2num(date[date_arxiv_index]),
+    y[date_arxiv_index],
     "o",
     markersize=15,
     color="r",
@@ -113,9 +153,26 @@ plt.annotate(
     font="serif",
     weight="bold",
 )
+plt.annotate(
+    "arXiv upload",
+    (mdates.date2num(date[date_arxiv_index]), y[date_arxiv_index]),
+    xytext=(10, -15),
+    textcoords="offset points",
+    arrowprops=arrowprops,
+    fontsize=size,
+    font="serif",
+    weight="bold",
+)
 plt.plot(
     mdates.date2num(date[date_github_index]),
     y[date_github_index],
+    "o",
+    markersize=15,
+    color="r",
+)
+plt.plot(
+    mdates.date2num(date[date_arxiv_index]),
+    y[date_arxiv_index],
     "o",
     markersize=15,
     color="r",
@@ -146,6 +203,16 @@ plt.annotate(
     font="serif",
     weight="bold",
 )
+plt.annotate(
+    "arXiv upload",
+    (mdates.date2num(date[date_arxiv_index]), y[date_arxiv_index]),
+    xytext=(10, -15),
+    textcoords="offset points",
+    arrowprops=arrowprops,
+    fontsize=size,
+    font="serif",
+    weight="bold",
+)
 plt.plot(
     mdates.date2num(date[date_github_index]),
     y[date_github_index],
@@ -153,7 +220,14 @@ plt.plot(
     markersize=15,
     color="r",
 )
-pretty_labels("", "views unique", 14, title=f"# views = {int(np.cumsum(view)[-1]):d}, # clones = {int(np.cumsum(clone)[-1]):d}", grid=False)
+plt.plot(
+    mdates.date2num(date[date_arxiv_index]),
+    y[date_arxiv_index],
+    "o",
+    markersize=15,
+    color="r",
+)
+pretty_labels("", "views unique", 14, title=f"# views = {int(np.cumsum(view)[-1]):d}, # clones = {int(np.cumsum(clone)[-1]):d} # pypi = {int(np.cumsum(pypi)[-1]):d}", grid=False)
 plt.tight_layout()
 
 
@@ -181,9 +255,26 @@ plt.annotate(
     font="serif",
     weight="bold",
 )
+plt.annotate(
+    "arXiv upload",
+    (mdates.date2num(date[date_arxiv_index]), y[date_arxiv_index]),
+    xytext=(10, -15),
+    textcoords="offset points",
+    arrowprops=arrowprops,
+    fontsize=size,
+    font="serif",
+    weight="bold",
+)
 plt.plot(
     mdates.date2num(date[date_github_index]),
     y[date_github_index],
+    "o",
+    markersize=15,
+    color="r",
+)
+plt.plot(
+    mdates.date2num(date[date_arxiv_index]),
+    y[date_arxiv_index],
     "o",
     markersize=15,
     color="r",
@@ -214,9 +305,26 @@ plt.annotate(
     font="serif",
     weight="bold",
 )
+plt.annotate(
+    "arXiv upload",
+    (mdates.date2num(date[date_arxiv_index]), y[date_arxiv_index]),
+    xytext=(10, -15),
+    textcoords="offset points",
+    arrowprops=arrowprops,
+    fontsize=size,
+    font="serif",
+    weight="bold",
+)
 plt.plot(
     mdates.date2num(date[date_github_index]),
     y[date_github_index],
+    "o",
+    markersize=15,
+    color="r",
+)
+plt.plot(
+    mdates.date2num(date[date_arxiv_index]),
+    y[date_arxiv_index],
     "o",
     markersize=15,
     color="r",
@@ -247,9 +355,26 @@ plt.annotate(
     font="serif",
     weight="bold",
 )
+plt.annotate(
+    "arXiv upload",
+    (mdates.date2num(date[date_arxiv_index]), y[date_arxiv_index]),
+    xytext=(10, -15),
+    textcoords="offset points",
+    arrowprops=arrowprops,
+    fontsize=size,
+    font="serif",
+    weight="bold",
+)
 plt.plot(
     mdates.date2num(date[date_github_index]),
     y[date_github_index],
+    "o",
+    markersize=15,
+    color="r",
+)
+plt.plot(
+    mdates.date2num(date[date_arxiv_index]),
+    y[date_arxiv_index],
     "o",
     markersize=15,
     color="r",
@@ -280,9 +405,26 @@ plt.annotate(
     font="serif",
     weight="bold",
 )
+plt.annotate(
+    "arXiv upload",
+    (mdates.date2num(date[date_arxiv_index]), y[date_arxiv_index]),
+    xytext=(10, -15),
+    textcoords="offset points",
+    arrowprops=arrowprops,
+    fontsize=size,
+    font="serif",
+    weight="bold",
+)
 plt.plot(
     mdates.date2num(date[date_github_index]),
     y[date_github_index],
+    "o",
+    markersize=15,
+    color="r",
+)
+plt.plot(
+    mdates.date2num(date[date_arxiv_index]),
+    y[date_arxiv_index],
     "o",
     markersize=15,
     color="r",
@@ -312,9 +454,26 @@ plt.annotate(
     font="serif",
     weight="bold",
 )
+plt.annotate(
+    "arXiv upload",
+    (mdates.date2num(date[date_arxiv_index]), y[date_arxiv_index]),
+    xytext=(10, -15),
+    textcoords="offset points",
+    arrowprops=arrowprops,
+    fontsize=size,
+    font="serif",
+    weight="bold",
+)
 plt.plot(
     mdates.date2num(date[date_github_index]),
     y[date_github_index],
+    "o",
+    markersize=15,
+    color="r",
+)
+plt.plot(
+    mdates.date2num(date[date_arxiv_index]),
+    y[date_arxiv_index],
     "o",
     markersize=15,
     color="r",

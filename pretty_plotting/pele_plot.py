@@ -12,10 +12,14 @@ date=pd.to_datetime(A[1:,0])
 
 date_ecp_index = np.argwhere(A[:,0] == '2023-12-31')[0][0]-1
 
-clone_unique=Ai[1:,2]
-clone=Ai[1:,1]
-view=Ai[1:,3]
-view_unique=Ai[1:,4]
+ind_clones_unique = np.argwhere(A.data[0,:] == "clones_unique")[0][0]
+ind_clones = np.argwhere(A.data[0,:] == "clones")[0][0]
+ind_views_unique = np.argwhere(A.data[0,:] == "views_unique")[0][0]
+ind_views = np.argwhere(A.data[0,:] == "views")[0][0]
+clone_unique=Ai[1:,ind_clones_unique]
+clone=Ai[1:,ind_clones]
+view=Ai[1:,ind_views]
+view_unique=Ai[1:,ind_views_unique]
 
 days = np.array(list(range(1,Ai[1:,:].shape[0]+1)))
 
