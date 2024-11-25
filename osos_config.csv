@@ -9,6 +9,6 @@ amrex-combustion,pelelmex,,,,DATA_DIR/NAME.csv
 nrel,sup3r,nrel-sup3r,,,DATA_DIR/NAME.csv
 rybchuk,latent-diffusion-3d-atmospheric-boundary-layer,,,,DATA_DIR/NAME.csv
 malihass,prettyPlot,prettyPlot,,,DATA_DIR/NAME.csv
-malihass,secretsanta,,,,DATA_DIR/NAME.csv
+malihass,secretsanta,secret-santa-email,,,DATA_DIR/NAME.csv
 nrel,bioreactordesign,nrel-bird,,,DATA_DIR/NAME.csv
 nrel,mluq-prop,,,,DATA_DIR/NAME.csv
