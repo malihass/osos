@@ -133,7 +133,7 @@ plt.tight_layout()
 
 fig,ax = plt.subplots()
 ax.xaxis.set_major_formatter(mdates.DateFormatter('%Y-%m'))
-plt.plot(date, np.cumsum(clone_unique))
+plt.plot(date, np.cumsum(clone_unique), linewidth=3, color='k')
 y = np.cumsum(clone_unique)
 plt.xticks(date, rotation=90)
 old = None
@@ -177,7 +177,7 @@ plt.plot(
     markersize=15,
     color="r",
 )
-pretty_labels("", "clones unique", 14, grid=False)
+pretty_labels("", "clones unique", 14, title=f"# views = {int(np.cumsum(view)[-1]):d}, # clones = {int(np.cumsum(clone)[-1]):d}", grid=False)
 plt.tight_layout()
 
 
