@@ -2,6 +2,8 @@
 Open Source Ops and Statistics (OSOS)
 *************************************
 
+temporary fix
+
 .. image:: https://github.com/NREL/osos/workflows/Documentation/badge.svg
     :target: https://nrel.github.io/osos/
 
