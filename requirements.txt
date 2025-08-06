@@ -2,6 +2,6 @@ click
 nrel-rex
 numpy
 pandas
-pypistats==1.8.0
+pypistats==1.10.0
 requests
 seaborn
