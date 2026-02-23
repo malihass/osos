@@ -1,17 +1,18 @@
 ﻿git_owner,git_repo,pypi_name,conda_org,conda_name,fpath_out
-nrel,diversity_SR,,,,DATA_DIR/NAME.csv
-nrel,phase-space-sampling,uips,,,DATA_DIR/NAME.csv
-nrel,ganisp,,,,DATA_DIR/NAME.csv
-nrel,pinnstripes,,,,DATA_DIR/NAME.csv
+natlabrockies,diversity_SR,,,,DATA_DIR/NAME.csv
+natlabrockies,phase-space-sampling,uips,,,DATA_DIR/NAME.csv
+natlabrockies,ganisp,,,,DATA_DIR/NAME.csv
+natlabrockies,pinnstripes,,,,DATA_DIR/NAME.csv
 amrex-combustion,pelephysics,,,,DATA_DIR/NAME.csv
 amrex-combustion,pelec,,,,DATA_DIR/NAME.csv
 amrex-combustion,pelelmex,,,,DATA_DIR/NAME.csv
-nrel,sup3r,nrel-sup3r,,,DATA_DIR/NAME.csv
+natlabrockies,sup3r,nrel-sup3r,,,DATA_DIR/NAME.csv
 rybchuk,latent-diffusion-3d-atmospheric-boundary-layer,,,,DATA_DIR/NAME.csv
 malihass,prettyPlot,prettyPlot,,,DATA_DIR/NAME.csv
 malihass,secretsanta,,,,DATA_DIR/NAME.csv
-nrel,bioreactordesign,nlr-bird,,,DATA_DIR/NAME.csv
-nrel,mluq-prop,,,,DATA_DIR/NAME.csv
+natlabrockies,bioreactordesign,nlr-bird,,,DATA_DIR/NAME.csv
+natlabrockies,mluq-prop,,,,DATA_DIR/NAME.csv
+
 
 
 
