@@ -3,9 +3,9 @@ natlabrockies,diversity_SR,,,,DATA_DIR/NAME.csv
 natlabrockies,phase-space-sampling,,,,DATA_DIR/NAME.csv
 natlabrockies,ganisp,,,,DATA_DIR/NAME.csv
 natlabrockies,pinnstripes,,,,DATA_DIR/NAME.csv
-amrex-combustion,pelephysics,,,,DATA_DIR/NAME.csv
-amrex-combustion,pelec,,,,DATA_DIR/NAME.csv
-amrex-combustion,pelelmex,,,,DATA_DIR/NAME.csv
+pele-suite,pelephysics,,,,DATA_DIR/NAME.csv
+pele-suite,pelec,,,,DATA_DIR/NAME.csv
+pele-suite,pelelmex,,,,DATA_DIR/NAME.csv
 natlabrockies,sup3r,,,,DATA_DIR/NAME.csv
 rybchuk,latent-diffusion-3d-atmospheric-boundary-layer,,,,DATA_DIR/NAME.csv
 malihass,prettyPlot,,,,DATA_DIR/NAME.csv
